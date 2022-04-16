@@ -10,6 +10,7 @@ const Chaekout = () => {
             <div className='profile-div'>
                 <h3>profile</h3>
             </div>
+
         </div>
     );
 };

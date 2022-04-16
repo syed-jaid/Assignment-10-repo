@@ -1,0 +1,36 @@
+/* header nav links  */
+.nav-links-componnt {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+.nav-links-componnt:hover {
+    color: black;
+    border-bottom: 3px solid rgb(68, 218, 255);
+}
+
+/* sign up and log in links */
+.nav-links-sing {
+    color: black;
+    font-weight: 600;
+    border-radius: 35px;
+    padding: 5px 20px;
+    border: 2px solid white;
+    text-decoration: none;
+}
+
+.nav-links-sing:hover {
+    border: 2px solid rgb(111, 226, 255);
+}
+
+.super-log-links {
+    color: white;
+    font-weight: 600;
+    padding: 5px 20px;
+    border: 2px solid white;
+    border-radius: 35px;
+    background-color: rgb(111, 219, 255);
+    text-decoration: none;
+}
