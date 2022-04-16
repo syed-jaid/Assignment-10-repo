@@ -1,0 +1,20 @@
+.found-title {
+    text-align: center;
+    font-size: 50px
+}
+
+.found-404 {
+    text-align: center;
+    font-size: 80px;
+    margin: 20px;
+    color: red;
+}
+
+/* to make the sentese colrefull  */
+.color-red {
+    color: rgb(51, 68, 255);
+}
+
+.color-yellow {
+    color: rgb(255, 161, 94);
+}

@@ -1,0 +1,23 @@
+/* main div of chaekout */
+.chaekout-main-div {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+/* input-div */
+.input-div {
+    background-color: rgb(235, 235, 235);
+    margin: 40px;
+    width: 90%;
+    height: 450px;
+    border-radius: 30px;
+}
+
+/* profile div  */
+.profile-div {
+    background-color: rgb(184, 184, 184);
+    margin: 40px 20px 20px 20px;
+    width: 90%;
+    height: 450px;
+    border-radius: 30px;
+}
