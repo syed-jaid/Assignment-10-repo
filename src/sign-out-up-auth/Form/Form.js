@@ -10,14 +10,15 @@ import auth from '../../firebase.init';
 
 const Form = ({ data }) => {
     // email and password usestate
+    const [user, setuser] = useState({})
     const [email, setemail] = useState('')
     const [password, setpassword] = useState('')
     const [confirmpassword, setcnfirmpassword] = useState('')
     const [passworderror, setpassworderror] = useState('')
 
-    const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true })
+    const users = useAuthState(auth)
 
-    const user = useAuthState(auth)
+    const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true })
 
     const naviget = useNavigate('')
 
@@ -37,7 +38,7 @@ const Form = ({ data }) => {
         if (password === confirmpassword) {
             createUserWithEmailAndPassword(email, password)
             setpassworderror('')
-
+            setuser(users)
         }
         else {
             setpassworderror('Your password and confirm password are not maching')
@@ -45,6 +46,7 @@ const Form = ({ data }) => {
     }
     const hendelcreateUserlogIn = () => {
         signInWithEmailAndPassword(email, password)
+        setuser(users)
     }
     return (
         <div className='form-main-div'>
