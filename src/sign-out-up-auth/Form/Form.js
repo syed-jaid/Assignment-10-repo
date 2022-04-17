@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Form.css'
-import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useAuthState, useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import img1 from '../../img/auth-icon/1.png'
 import img2 from '../../img/auth-icon/2.png'
 import { Link } from 'react-router-dom';
@@ -14,6 +14,9 @@ const Form = ({ data }) => {
     const [password, setpassword] = useState('')
     const [confirmpassword, setcnfirmpassword] = useState('')
     const [passworderror, setpassworderror] = useState('')
+
+    const user = useAuthState(auth);
+    console.log(user[0])
 
     const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true })
 
@@ -83,7 +86,7 @@ const Form = ({ data }) => {
                         }
 
 
-                        <div className='or-part'>
+                        <div className='or-part mt-3'>
                             <hr />
                             <h5 className='text-or'>or</h5>
                             <hr />
