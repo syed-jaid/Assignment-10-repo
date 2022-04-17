@@ -6,9 +6,9 @@ import Card from './card/Card';
 
 const Home = () => {
     const data = [
-        { title: 'Wedding Anniversary', imgurl: 'https://media.istockphoto.com/photos/photographer-is-taking-pictures-the-bride-in-the-studio-picture-id540387740?k=20&m=540387740&s=612x612&w=0&h=AHqs7lP-IsrsRS9IGp4tLMupvg2eMmbzIbdjmyLtVLk= ', discription: '', kye: '1' },
-        { title: 'jahid', imgurl: 'https://images.unsplash.com/photo-1614778265188-dff1832ae5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHBob3RvJTIwc2hvb3R8ZW58MHx8MHx8&w=1000&q=80', discription: '', kye: '3' },
-        { title: 'Professional', imgurl: 'https://media.gettyimages.com/photos/photographer-in-the-studio-picture-id1091237140?s=612x612', discription: '', kye: '2' }
+        { title: 'Wedding Photography', price: ' $ 780', imgurl: 'https://media.istockphoto.com/photos/photographer-is-taking-pictures-the-bride-in-the-studio-picture-id540387740?k=20&m=540387740&s=612x612&w=0&h=AHqs7lP-IsrsRS9IGp4tLMupvg2eMmbzIbdjmyLtVLk= ', discription: 'Photo by Wedding Photographer Delhi on March 16, 2022. May be a closeup of 1 person..' },
+        { title: 'Modle Photography', price: ' $ 450', imgurl: 'https://images.unsplash.com/photo-1614778265188-dff1832ae5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHBob3RvJTIwc2hvb3R8ZW58MHx8MHx8&w=1000&q=80', discription: 'Modle photography is one of the most exciting of photography,but it is one of the most challenging! ', kye: '3' },
+        { title: 'Professional Photography', price: ' $1200', imgurl: 'https://media.gettyimages.com/photos/photographer-in-the-studio-picture-id1091237140?s=612x612', discription: 'Professional photographers combine technical proficiency with artistry to create images of people..', kye: '2' }
 
     ]
     return (
@@ -23,7 +23,7 @@ const Home = () => {
                     <img className='  profile-img' src={mainimg} alt="" />
                 </div>
             </div>
-            <h1 className='home-title text-center mt-5'>The </h1>
+            <h1 className='home-title text-center mt-5 pt-5'>The Services I Provide </h1>
             <div className='d-md-flex justify-content-evenly'>
                 {
                     data.map(data => <Card data={data} key={data.kye}></Card>)

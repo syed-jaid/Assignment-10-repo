@@ -6,6 +6,13 @@
     border-bottom: 3px solid rgb(255, 255, 255);
 }
 
+.webname {
+    color: black;
+    margin-right: 10px;
+    font-weight: 600;
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+
 .nav-links-componnt:hover {
     color: black;
     border-bottom: 3px solid rgb(68, 218, 255);

@@ -1,16 +1,37 @@
 .card-div {
     width: 18rem;
-    height: 380px;
-    border: 2 solid white;
+    height: 460px;
+    border: 2 solid rgb(255, 255, 255);
     border-radius: 14px;
-    background-color: rgb(236, 253, 255);
+    background-color: rgb(234, 234, 234);
     box-shadow: 1px 1px 10px rgb(229, 229, 229);
+}
+
+.card-div:hover {
+    border: 2 solid white;
+    box-shadow: 1px 1px 10px rgb(154, 154, 154);
+
 }
 
 .card-img-top {
     border-radius: 14px;
 }
 
+.card-text {
+    text-align: start;
+}
+
 .sivises-button {
-    margin-left: 35px;
+    margin-left: 50px;
+
+    padding: 11px 40px;
+    border-radius: 35px;
+    width: 274px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: rgb(71, 215, 255);
+    border: 3px solid white;
+    box-shadow: 1px 1px 8px rgb(177, 177, 177);
 }

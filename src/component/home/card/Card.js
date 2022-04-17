@@ -9,8 +9,9 @@ const Card = ({ data }) => {
             <img src={data.imgurl} className="card-img-top h-50" alt="..." />
             <div className="card-body">
                 <h5 className="card-title">{data.title}</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <Link to='/chackout' className='sivises-button  submit-button text-decoration-none px-5 py-2' >Read More</Link>
+                <p className="card-text">{data.discription}</p>
+                <h3 className="card-text mt-0 mb-3"> Price : {data.price}</h3>
+                <Link to='/chackout' className='sivises-button  py-2' >Book Now</Link>
             </div>
         </div>
     );
