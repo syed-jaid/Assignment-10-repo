@@ -1,0 +1,16 @@
+.card-div {
+    width: 18rem;
+    height: 380px;
+    border: 2 solid white;
+    border-radius: 14px;
+    background-color: rgb(236, 253, 255);
+    box-shadow: 1px 1px 10px rgb(229, 229, 229);
+}
+
+.card-img-top {
+    border-radius: 14px;
+}
+
+.sivises-button {
+    margin-left: 35px;
+}

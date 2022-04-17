@@ -13,6 +13,7 @@ import SignUp from './sign-out-up-auth/signUp/SignUp';
 
 
 function App() {
+
   return (
     <div>
       <Header></Header>
