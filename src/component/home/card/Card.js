@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Card.css'
 
 const Card = ({ data }) => {
-    console.log(data.imgurl)
+
     return (
         <div className="card-div mx-auto m-5" >
             <img src={data.imgurl} className="card-img-top h-50" alt="..." />

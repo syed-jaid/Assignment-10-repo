@@ -3,7 +3,7 @@ import './Form.css'
 import { useAuthState, useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import img1 from '../../img/auth-icon/1.png'
 import img2 from '../../img/auth-icon/2.png'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 
@@ -15,10 +15,11 @@ const Form = ({ data }) => {
     const [confirmpassword, setcnfirmpassword] = useState('')
     const [passworderror, setpassworderror] = useState('')
 
-    const user = useAuthState(auth);
-    console.log(user[0])
-
     const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true })
+
+    const user = useAuthState(auth)
+
+    const naviget = useNavigate('')
 
     const [signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
 
@@ -36,6 +37,7 @@ const Form = ({ data }) => {
         if (password === confirmpassword) {
             createUserWithEmailAndPassword(email, password)
             setpassworderror('')
+
         }
         else {
             setpassworderror('Your password and confirm password are not maching')
@@ -84,8 +86,6 @@ const Form = ({ data }) => {
                                 <button className='submit-button' onClick={hendelcreateUserlogIn}>Log In</button>
                             </div>
                         }
-
-
                         <div className='or-part mt-3'>
                             <hr />
                             <h5 className='text-or'>or</h5>
@@ -98,6 +98,9 @@ const Form = ({ data }) => {
                     </div>
                 </div>
             </form>
+            {
+                user[0] ? naviget('/') : ''
+            }
         </div>
     );
 };
