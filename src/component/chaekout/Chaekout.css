@@ -6,18 +6,55 @@
 
 /* input-div */
 .input-div {
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(215, 215, 215);
+    box-shadow: 1px 1px 10px rgb(205, 205, 205);
+    border: 3px solid white;
     margin: 40px;
     width: 90%;
-    height: 450px;
+    height: 500px;
     border-radius: 30px;
+}
+
+.input-fild {
+    padding: 10px 15px;
+    color: black;
+    border-radius: 35px;
+    border: 2px solid rgb(102, 207, 243);
+    background-color: rgb(237, 248, 248);
 }
 
 /* profile div  */
 .profile-div {
-    background-color: rgb(184, 184, 184);
+
     margin: 40px 20px 20px 20px;
     width: 90%;
-    height: 450px;
+    height: 500px;
     border-radius: 30px;
+    background-color: rgb(206, 206, 206);
+    box-shadow: 1px 1px 10px rgb(205, 205, 205);
+    border: 3px solid white;
+}
+
+.order-info {
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    padding-left: 30px;
+}
+
+/* info change button */
+.change-button {
+    padding: 7px 15px;
+    margin-left: 30px;
+    border-radius: 35px;
+    width: 250px;
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: rgb(71, 215, 255);
+    border: 3px solid white;
+    box-shadow: 1px 1px 8px rgb(177, 177, 177);
+}
+
+.set-info {
+    color: black;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import './Form.css'
 import img1 from '../../img/auth-icon/1.png'
 import img2 from '../../img/auth-icon/2.png'
+import { Link } from 'react-router-dom';
 
 const Form = ({ data }) => {
     return (
@@ -28,6 +29,11 @@ const Form = ({ data }) => {
                         </div>
                         {
                             data ? <input className='input-filds' type="password" name="CofrimPassword" placeholder='Enter Cofrim Password' /> : ''
+                        }
+
+                        {
+                            data ? <Link to='/login' className='ms-4 nav-link'>Already have an account</Link> :
+                                <Link to='/signup' className='ms-4 nav-link'>Want to create an account</Link>
                         }
                         {
                             data ? <div>

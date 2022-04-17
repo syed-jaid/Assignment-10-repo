@@ -2,7 +2,8 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './component/about/About';
 import Blog from './component/blog/Blog';
-import Chaekout from './component/chaekout/Chaekout';
+import Chaekout from './component/chaekout/checkout';
+
 import Header from './component/header/Header';
 import Home from './component/home/Home';
 import Not from './component/notfound/Not';
