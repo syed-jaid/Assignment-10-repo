@@ -1,7 +1,11 @@
 .footer-div {
-    background-color: #21081a;
+    background-color: #000000;
+    font-family: 'Ms Madi', cursive;
+    color: rgb(85, 246, 255);
+    color: rgb(85, 246, 255);
 }
 
 .copydiv {
     background-color: rgba(69, 69, 69, 0.2);
+    color: rgb(85, 246, 255);
 }
