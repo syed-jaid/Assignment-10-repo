@@ -3,6 +3,7 @@ import './Home.css'
 import mainimg from '../../img/photo-man/manimg.png';
 import { Link } from 'react-router-dom';
 import Card from './card/Card';
+import Footer from './footer/Footer';
 
 const Home = () => {
     const data = [
@@ -29,6 +30,8 @@ const Home = () => {
                     data.map(data => <Card data={data} key={data.kye}></Card>)
                 }
             </div>
+
+            <Footer></Footer>
         </div>
     );
 };
