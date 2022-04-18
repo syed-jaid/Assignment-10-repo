@@ -6,6 +6,7 @@ import auth from '../../firebase.init';
 import img1 from '../../img/auth-icon/1.png'
 import img2 from '../../img/auth-icon/2.png'
 import Form from '../Form/Form';
+import Loging from '../../component/Loging';
 
 const SignUp = () => {
     // all usestates are here
@@ -54,15 +55,19 @@ const SignUp = () => {
         if (confirmpassword === password) {
             await createUserWithEmailAndPassword(email, password)
             await updateProfile({ displayName: name })
+            if (loading) {
+                return <Loging></Loging>
+            };
+
             if (user) {
                 naviget('/')
             }
             else if (error) {
-                setuperror(error.message)
+                seterror(error.message)
             }
         }
         else {
-            seterror(error.message)
+            seterror(error?.message)
             setpassworderror('Your password and confirm password are not maching')
             return
         }

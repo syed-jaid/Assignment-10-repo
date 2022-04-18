@@ -1,7 +1,11 @@
+
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react';
-import { useAuthState, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useAuthState, useSendPasswordResetEmail, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
 import img1 from '../../img/auth-icon/1.png'
 import img2 from '../../img/auth-icon/2.png'
@@ -14,6 +18,7 @@ const Login = () => {
 
     // location 
     const MainUser = useAuthState(auth)
+    console.log(MainUser)
     const naviget = useNavigate()
     const location = useLocation()
     let from = location.state?.from?.pathname || '/';
@@ -23,6 +28,10 @@ const Login = () => {
 
     const [signInWithGithub] = useSignInWithGithub(auth);
 
+    // forget password updata
+    const [sendPasswordResetEmail, sending, passworderror] = useSendPasswordResetEmail(
+        auth
+    );
     // sign in form 
     const heandelSignInSignUp = (e) => {
         e.preventDefault();
@@ -30,16 +39,35 @@ const Login = () => {
         setpassword(e.target.password.value);
     };
 
-    const hendelcreateUserlogIn = () => {
-        signInWithEmailAndPassword(auth, email, password)
+    const hendelcreateUserlogIn = async () => {
+        await signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
-                console.log(user)
+
             })
             .catch((error) => {
                 const errorMessage = error.message;
                 seterror(errorMessage)
-            });
+
+            })
+        if (MainUser[0]) {
+            naviget(from, { replace: true })
+        }
+    }
+
+    const forgetpassword = async () => {
+        if (email) {
+            await sendPasswordResetEmail(email)
+            if (passworderror) {
+                seterror(passworderror.message)
+            }
+            else {
+                toast('send email')
+            }
+        }
+        else {
+            alert('plz enter email')
+        }
     }
     return (
         <div>
@@ -55,6 +83,7 @@ const Login = () => {
                             <input className='input-filds' type="password" name="password" placeholder='Enter Password' required />
                             <p className='text-center'>{errors}</p>
                             <Link to='/signup' className='ms-4 nav-link'>Want to create an account</Link>
+                            <small className='nav-link ms-4' onClick={forgetpassword}>Forget password ?</small>
                             <button className='submit-button' onClick={hendelcreateUserlogIn}>Log In</button>
 
                             <div className='or-part mt-3'>
@@ -78,7 +107,7 @@ const Login = () => {
                             </div>
                         </div>
                     </div>
-                </form>
+                </form><ToastContainer />
             </div>
         </div>
     );
