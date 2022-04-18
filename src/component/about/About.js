@@ -4,8 +4,11 @@ import './About.css'
 
 const About = () => {
     return (
-        <div className='d-flex justify-content-center align-items-center'>
-            <img className='profile-img' src={img} alt="" />
+        <div className='d-flex justify-content-center align-items-center my-5'>
+            <div>
+                <img className='profiles-img' src={img} alt="" />
+                <p className='text-center'><small >sorry I dont have good photo</small></p>
+            </div>
             <div>
                 <p className='porfile-info'>
                     <span className='profile-name'>It’s me Syed Jahid</span>. I have completed my SSC in 2021. After completing my SSC I stope my study only because of learning programming. And I am determined to continue my learning and struggle until become successful in this digital world.  I am trying to give laser focus on this sector.

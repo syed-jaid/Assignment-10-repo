@@ -21,7 +21,7 @@ const Home = () => {
                     <Link to='/about' className=' ms-0 submit-button text-decoration-none px-5 py-2' >Read More</Link>
                 </div>
                 <div>
-                    <img className='  profile-img' src={mainimg} alt="" />
+                    <img className=' profile-img' src={mainimg} alt="" />
                 </div>
             </div>
             <h1 className='home-title text-center mt-5 pt-5'>The Services I Provide </h1>
