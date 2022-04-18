@@ -6,18 +6,9 @@ import auth from '../../firebase.init';
 import './Header.css'
 
 const Header = () => {
-    const [toggol, settogol] = useState('')
     const user = useAuthState(auth)
     const naviget = useLocation()
     const navgaiteValue = naviget.pathname;
-
-    // if (navgaiteValue == 'signup') {
-    //     settogol('signin')
-    // }
-    // else {
-    //     settogol('')
-    // }
-    console.log(naviget.pathname)
     const logout = () => {
         signOut(auth);
     };
